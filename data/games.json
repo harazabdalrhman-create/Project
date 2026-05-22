@@ -1,0 +1,43 @@
+[
+  {
+    "id": "g1",
+    "title": "Neon Drift 2",
+    "genre": "Racing",
+    "developer": "VoltStudios",
+    "platform": "PC",
+    "year": 2024,
+    "badge": "featured",
+    "description": "A futuristic racing game",
+    "tags": [
+      "Multiplayer",
+      "Fast-Paced"
+    ],
+    "imageUrl": "/images/neon.jpg",
+    "rating": 4.7,
+    "reviewsCount": 142,
+    "createdAt": "2026-05-20"
+  },
+
+  {
+    "id": "g2",
+    "title": "Phantom Realm",
+    "genre": "RPG",
+    "developer": "ShadowForge",
+    "platform": "Xbox",
+    "year": 2024,
+    "badge": "trending",
+    "description": "Dark fantasy RPG",
+    "tags": [
+      "Story-Rich",
+      "Open World"
+    ],
+    "imageUrl": "/images/phantom.jpg",
+    "rating": 4.9,
+    "reviewsCount": 389,
+    "createdAt": "2026-05-20"
+  }
+
+
+
+  
+]

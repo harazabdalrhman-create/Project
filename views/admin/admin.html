@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Gaming Hub</title>
+  <link rel="stylesheet" href="../../public/css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="../index.html" class="navbar-logo">
+      <div class="logo-icon"><img src="../../assets/images/DUR7PaeXUAM_Tuz.png" alt="Gaming Hub Logo"></div>
+      <div class="logo-text">Gaming<span>Hub</span></div>
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="../games.html" class="nav-link">Games</a></li>
+      <li><a href="../Library.html" class="nav-link">My Library</a></li>
+      <li><a href="admin.html" class="nav-link active">Admin</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--cyan);border:2px solid var(--cyan);padding:4px 12px;border-radius:var(--radius-pill)">ADMIN</span>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="admin-layout" style="padding-top:72px">
+  
+  <aside class="admin-sidebar">
+    <div style="padding:24px;border-bottom:1px solid rgba(255,255,255,0.08)">
+      <div style="font-family:var(--font-display);font-size:0.8rem;font-weight:700;color:var(--white)">Admin Panel</div>
+      <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--gray);margin-top:4px">GamingHub v1.0</div>
+    </div>
+
+    <div class="admin-sidebar-title">Overview</div>
+    <a href="admin.html" class="admin-nav-item active">
+      <span class="admin-nav-icon"></span> Dashboard
+    </a>
+
+    <div class="admin-sidebar-title">Content</div>
+    <a href="admin-games.html" class="admin-nav-item">
+      <span class="admin-nav-icon"></span> All Games
+    </a>
+    <a href="admin-add-game.html" class="admin-nav-item">
+      <span class="admin-nav-icon"></span> Add Game
+    </a>
+
+    <div style="position:absolute;bottom:24px;left:0;right:0;padding:0 16px">
+      <a href="../index.html" class="btn btn-outline-white btn-sm" style="width:100%">← Back to Site</a>
+    </div>
+  </aside>
+
+  <main class="admin-content">
+    <div class="admin-panel">
+      <div class="admin-page-title">Dashboard</div>
+      <div class="admin-page-subtitle">Platform overview and stats</div>
+
+      <div class="grid-4" style="margin-bottom:40px">
+        <div class="stat-card">
+          <div class="stat-icon">🎮</div>
+          <div class="stat-value" id="stat-total-games" data-val="8">8</div>
+          <div class="stat-label">Total Games</div>
+          <div class="stat-change">+3 this month</div>
+        </div>
+        <div class="stat-card" style="background:var(--white);color:var(--white);border-color:var(--cyan)">
+          <div class="stat-icon">👥</div>
+          <div class="stat-value">42K</div>
+          <div class="stat-label">Active Users</div>
+          <div class="stat-change">+8% this month</div>
+        </div>
+        <div class="stat-card" style="background:var(--yellow);border-color:var(--black)">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-value">4.7</div>
+          <div class="stat-label">Avg. Rating</div>
+          <div class="stat-change">↑ 0.2 pts</div>
+        </div>
+      </div>
+
+      <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;color:var(--black);margin-bottom:20px">Recently Added</h3>
+      <div class="admin-table-card">
+        <table class="admin-table">
+          <thead>
+            <tr><th>Game</th><th>Genre</th><th>Year</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="admin-table-cover">🗡️</span>Phantom Realm</td><td>RPG</td><td>2024</td><td><span class="tag tag-cyan">trending</span></td></tr>
+            <tr><td><span class="admin-table-cover">🏎️</span>Neon Drift</td><td>Racing</td><td>2024</td><td><span class="tag tag-yellow">featured</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>
