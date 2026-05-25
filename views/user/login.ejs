@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Log In — PixelVault</title>
-  <link rel="stylesheet" href="../../public/css/style.css" />
+  <title><%= pageTitle %></title>
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 
 <nav class="navbar">
   <div class="navbar-inner">
-    <a href="index.html" class="navbar-logo">
-      <div class="logo-icon">🕹️</div>
-      <div class="logo-text">Pixel<span>Vault</span></div>
+    <a href="/" class="navbar-logo">
+      <div class="logo-icon">
+        <img src="/assets/images/DUR7PaeXUAM_Tuz.png" alt="Gaming Hub Logo" />
+      </div>
     </a>
     <ul class="navbar-nav">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="games.html" class="nav-link">Games</a></li>
+      <li><a href="/" class="nav-link">Home</a></li>
+      <li><a href="/games" class="nav-link">Games</a></li>
     </ul>
     <div class="navbar-actions">
-      <a href="register.html" class="btn btn-cyan btn-sm">Create Account →</a>
+      <a href="/register" class="btn btn-cyan btn-sm">Create Account →</a>
     </div>
   </div>
 </nav>
@@ -111,7 +112,7 @@
   </div>
 </div>
 
-<script src="../assets/js/app.js"></script>
+<script src="/js/app.js"></script>
 <script>
   function togglePw() {
     const f = document.getElementById('password-field');

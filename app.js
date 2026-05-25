@@ -7,5 +7,5 @@ app.set('view engine', 'ejs');
 app.set('views', 'views');
 app.use(express.static(path.join(__dirname,"public")))
 app.use(userRouter)
-app.use(adminRouter)
+app.use("/admin",adminRouter)
 app.listen(3000)

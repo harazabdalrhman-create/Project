@@ -3,7 +3,10 @@ const adminController = require('../controller/admin')
 
 
 
-router.get("/admin",adminController.getadminDash );
+router.get("/admin-dashboard",adminController.getAdminDash );
+router.get("/admin-addGames",adminController.getAdminAddGames );
+router.get("/admin-games",adminController.getAdminGames );
+
 
 
 

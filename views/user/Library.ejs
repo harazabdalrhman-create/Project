@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><% pageTitle %></title>
+  <title><%= pageTitle %></title>
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
@@ -16,7 +16,7 @@
 
 <nav class="navbar">
   <div class="navbar-inner">
-    <a href="index.html" class="navbar-logo">
+    <a href="/" class="navbar-logo">
       <div class="logo-icon"><img src="/assets/images/DUR7PaeXUAM_Tuz.png" alt="Gaming Hub Logo"></div>
       <div class="logo-text">Gaming<span>Hub</span></div>
     </a>
@@ -24,11 +24,11 @@
       <li><a href="/" class="nav-link active">Home</a></li>
       <li><a href="/games" class="nav-link">Games</a></li>
       <li><a href="/Library" class="nav-link">My Library</a></li>
-      <li><a href="/admin" class="nav-link">Admin</a></li>
+      <li><a href="/admin/admin-dashboard" class="nav-link">Admin</a></li>
     </ul>
     <div class="navbar-actions">
-      <a href="login.html" class="btn btn-outline-white btn-sm">Log In</a>
-      <a href="register.html" class="btn btn-cyan btn-sm">Sign Up →</a>
+      <a href="/login" class="btn btn-outline-white btn-sm">Log In</a>
+      <a href="/register" class="btn btn-cyan btn-sm">Sign Up →</a>
       <button class="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -46,7 +46,7 @@
         <span style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;">All Library Games</span>
       </div>
 
-      <button id="add-to-library-btn" class="btn btn-primary">+ Add Game</button>
+      <button   id="add-to-library-btn" class="btn btn-primary" href="/">+ Add Game</button>
     </div>
 
     <div class="grid-4" id="library-grid" style="margin-bottom:80px; min-height: 40vh;"></div>
@@ -58,7 +58,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a href="index.html" class="navbar-logo" style="margin-bottom: 16px; display: flex">
+        <a href="/" class="navbar-logo" style="margin-bottom: 16px; display: flex">
           <div class="logo-icon">
             <img src="../assets/images/DUR7PaeXUAM_Tuz.png" alt="Gaming Hub Logo" />
           </div>
@@ -78,8 +78,8 @@
       <div>
         <div class="footer-heading">Platform</div>
         <ul class="footer-links">
-          <li><a href="games.html">Browse Games</a></li>
-          <li><a href="Library.html">My Library</a></li>
+          <li><a href="/games">Browse Games</a></li>
+          <li><a href="/Library">My Library</a></li>
           <li><a href="game-details.html">Game Reviews</a></li>
           <li><a href="#">Leaderboard</a></li>
         </ul>
@@ -96,10 +96,10 @@
       <div>
         <div class="footer-heading">Support</div>
         <ul class="footer-links">
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="/help">Help Center</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Use</a></li>
+          <li><a href="/contact">Contact Us</a></li>
         </ul>
       </div>
     </div>

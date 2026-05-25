@@ -1449,6 +1449,55 @@ img {
   text-align: right;
 }
 
+/* =============================================
+   RESPONSIVE: MOBILE NAV
+   Show hamburger on small screens and allow JS to
+   toggle `.navbar-nav.mobile-open` (keeps backward
+   compatibility with .mobile-nav rules).
+   ============================================= */
+@media (max-width: 880px) {
+
+  .navbar-inner {
+    padding: 0 16px;
+  }
+
+  /* Hide desktop nav and show hamburger */
+  .navbar-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* When JS adds .mobile-open to the navbar list */
+  .navbar-nav.mobile-open {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 72px;
+    background: var(--black);
+    z-index: 999;
+    padding: 24px;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+    border-top: 2px solid var(--cyan);
+  }
+
+  .navbar-nav.mobile-open .nav-link {
+    font-size: 1.05rem;
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    width: 100%;
+    display: block;
+    border: 2px solid transparent;
+  }
+
+  /* Ensure navbar actions stay visible and don't wrap */
+  .navbar-actions { gap: 8px; }
+}
 /* Reviews section */
 .reviews-section { margin-top: 48px; }
 .add-review-card {
