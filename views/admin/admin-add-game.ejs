@@ -1,31 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><%= pageTitle %></title>
-  <link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
+<%- include('../includes/head.ejs') %>
 
-<nav class="navbar">
-  <div class="navbar-inner">
-    <a href="/" class="navbar-logo">
-      <div class="logo-icon"><img src="/assets/images/DUR7PaeXUAM_Tuz.png" alt="Gaming Hub Logo"></div>
-      <div class="logo-text">Gaming<span>Hub</span></div>
-    </a>
-    <ul class="navbar-nav">
-      <li><a href="/" class="nav-link">Home</a></li>
-      <li><a href="/games" class="nav-link">Games</a></li>
-      <li><a href="/Library" class="nav-link">My Library</a></li>
-      <li><a href="/admin/admin-dashboard" class="nav-link active">Admin</a></li>
-    </ul>
-    <div class="navbar-actions">
-      <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--cyan);border:2px solid var(--cyan);padding:4px 12px;border-radius:var(--radius-pill)">ADMIN</span>
-      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-</nav>
+<%- include('../includes/admin-navbar.ejs') %>
 
 <div class="admin-layout" style="padding-top:72px">
   
@@ -142,6 +117,4 @@
   </main>
 </div>
 
-<script src="/js/app.js"></script>
-</body>
-</html>
+<%- include('../includes/end.ejs') %>
