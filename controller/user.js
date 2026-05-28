@@ -1,4 +1,5 @@
 const path = require('path')
+const Game = require("../model/games");
 exports.getHomePage = (req, res, next) => {
   res.render("user/index", {
     pageTitle: "Gaming Hub — Gaming Review Platform ",
@@ -6,7 +7,12 @@ exports.getHomePage = (req, res, next) => {
 };
 
 exports.getGamesPage = (req, res, next) => {
-  res.render("user/games.ejs", { pageTitle: "Games — Gaming Hub" });
+   Game.fetchAll((game) => {
+    res.render("user/games.ejs", {
+      pageTitle: "Games — Gaming Hub",
+       game:game
+    });
+  });
 };
 exports.getLibraryPage = (req, res, next) => {
   res.render("user/Library.ejs", { pageTitle: "My Library — Gaming Hub"});
