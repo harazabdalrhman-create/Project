@@ -26,23 +26,25 @@ module.exports =class Game {
   }
   save() {
     fs.readFile(p, (err, fileContent) => {
-      if (!err) {
-        gamearr.push(JSON.parse(fileContent));
-        return gamearr;
+      let games = [];
+      if (!err && fileContent.length > 0) {
+        games = JSON.parse(fileContent);
       }
-      gamearr.push(this)
-      fs.writeFile(p,JSON.stringify(gamearr),(err)=>{
-        console.log(err);
-      })
+      games.push(this);
+      fs.writeFile(p, JSON.stringify(games), (err) => {
+        if (err) {
+          console.error("Failed to save game:", err);
+        }
+      });
     });
   }
   static fetchAll(cb){
-    fs.readFile(p,((err,filecontent)=>{
-        if(!err){
-        return cb(JSON.parse(filecontent))
+    fs.readFile(p, (err, filecontent) => {
+        if(!err && filecontent.length > 0){
+          return cb(JSON.parse(filecontent));
         }
           cb([])
-     }))
+     })
 
   }
 }
